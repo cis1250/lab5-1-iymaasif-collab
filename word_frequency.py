@@ -2,7 +2,7 @@
 import re
 import string
 
-# Provided helper function (do not modify)
+
 def is_sentence(text):
     if not isinstance(text, str) or not text.strip():
         return False
@@ -15,7 +15,7 @@ def is_sentence(text):
     return True
 
 
-# Function 1: Get and validate sentence input
+# Function 1: validate sentence input
 def get_sentence():
     while True:
         user_sentence = input("Enter a sentence: ")
@@ -27,7 +27,6 @@ def get_sentence():
 
 # Function 2: Calculate word frequencies
 def calculate_frequencies(sentence):
-    # Remove punctuation and make lowercase
     cleaned = sentence.translate(str.maketrans("", "", string.punctuation)).lower()
     words_list = cleaned.split()
 
